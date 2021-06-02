@@ -18,12 +18,14 @@
 
 body{
   font-family: 'Poppins',  sans-serif ;
+  
 }
 
 .container{
   max-width: 1300px;
   margin: auto;
   padding: 0 25px;
+  overflow: hidden;
   
 }
 

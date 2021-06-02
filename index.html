@@ -369,14 +369,14 @@
 <!-- JS for toggle -->
 <script>
   var menuItems = document.getElementById('menuItems')
-  menuItems.style.right="-100%";
+  menuItems.style.visibility="hidden";
 
   function menutoggle(){
-    if (menuItems.style.right=="-100%"){
-      menuItems.style.right = "5px"
+    if (menuItems.style.visibility=="hidden"){
+      menuItems.style.visibility = "visible"
     }
     else{
-      menuItems.style.right="-100%"
+      menuItems.style.visibility="hidden"
     }
   }
 </script>
