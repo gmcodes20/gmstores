@@ -12,19 +12,25 @@
  <div class="header">
   <div class="container">
     <div class="navbar">
+      
       <div class="logo">
         <h2>gmstores <i class="fas fa-shopping-bag"></i></h2>
       </div>
-      <nav>
-        <ul id="menuItems">
+      <div class="harmburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="navigation">
+        <ul id="menuItems" class="nav__list">
           <li><a href="./index.html">Home</a></li>
-          <li><a href="">Products</a></li>
+          <li><a href="./products.html">Products</a></li>
           <li><a href="">ABout</a></li>
           <li><a href="">Contact</a></li>
           <li><a href="">Account</a></li>
         </ul>
-        <img src="./imgs/cart.png" alt="" width="30px" height="30px">
-        <img src="./imgs/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        <img class="cart" src="./imgs/cart.png" alt="" width="30px" height="30px">
+        
       </nav>
       <!-- <img src="./imgs/cart.png" alt="" width="30px" height="30px"> -->
     </div>
@@ -45,6 +51,9 @@
 <!-- Featured categories -->
 <div class="categories">
   <div class="small-container">
+    <h2 class="title">
+      Featured Categories
+    </h2>
     <div class="row">
       <div class="col-3">
         <img src="./imgs/category-1.jpg" alt="">
@@ -246,6 +255,9 @@
 <!-- Testimonial -->
 <div class="testimonial">
   <div class="small-container">
+    <h2 class="title">
+      What People are Saying
+    </h2>
     <div class="row">
       <div class="col-3">
         <i class="fas fa-quote-left"></i>
@@ -299,6 +311,10 @@
 <!-- Brands -->
 <div class="brands">
   <div class="small-container">
+    <h2 class="title">
+      Our Partners
+    </h2>
+
     <div class="row">
       <div class="col-5">
         <img src="./imgs/logo-coca-cola.png" alt="">
@@ -367,20 +383,8 @@
 
 
 <!-- JS for toggle -->
-<script>
-  var menuItems = document.getElementById('menuItems')
-  menuItems.style.visibility="hidden";
-
-  function menutoggle(){
-    if (menuItems.style.visibility=="hidden"){
-      menuItems.style.visibility = "visible"
-    }
-    else{
-      menuItems.style.visibility="hidden"
-    }
-  }
-</script>
 
 
+<script src="./js/script.js"></script>
 </body>
 </html>

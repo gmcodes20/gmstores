@@ -313,6 +313,7 @@ padding: 16px 0 20px;
 
 .app-logo{
   margin-top: 20px;
+  cursor: pointer;
 
 }
 
@@ -332,18 +333,71 @@ padding: 16px 0 20px;
 }
 
 
+
+/* All Products Page */
+
+.row-2{
+  justify-content: space-between;
+  margin: 100px auto 50px;
+}
+
+select{
+  border: 1px solid var(--secondary-color);
+}
+
+select:focus{
+  outline: none;
+}
+
+.page-btn{
+  margin: 0 auto 80px;
+}
+
+.page-btn span{
+  display: inline-block;
+  border: 1px solid var(--secondary-color);
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.page-btn span:hover{
+  background: var(--secondary-color);
+  color: var(--light-color);
+}
+
+
 /* Media Queries */
 
 @media only screen and (max-width:800px){
 
-  nav ul{
+  .logo h2{
     
+    font-size: 18px;
+    
+  }
+  
+  .logo i{
+    font-size: 16px;
+    
+  }
+
+
+
+  .navigation{
+    padding-right: 70px;
+  }
+
+  .nav__list{
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     background: var(--secondary-color);
-    width: 40%;
-    height: 399px;
+    width: 100vw;
+    height: 100vh;
     text-align: center;
     padding-top: 80px;
     display: flex;
@@ -351,11 +405,60 @@ padding: 16px 0 20px;
     align-items: flex-start;
     justify-content:flex-start;
     overflow: hidden;
-    transition: .5s;
-
+    clip-path: circle(100px at 90% -6%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    transition: all 1s ease-out;
+    
     
   }
 
+  .nav__list.open {
+    opacity: 1;
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    transition: all 1s ease-out;
+  }
+
+  .navbar{
+    justify-content: space-between;
+    padding-right: 60px;
+  }
+
+  .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    transition: all 0.9s ease-out;
+  }
+
+  .harmburger {
+    position: absolute;
+    cursor: pointer;
+    right: 30px;
+    top: 30px;
+    transform: translate(-5%, -20%);
+    z-index: 5;
+  }
+
+  .harmburger.open {
+    transition: all 2s ease-out;
+  }
+
+  .harmburger.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background: red;
+  }
+
+  .harmburger.open .line:nth-child(2) {
+    opacity: 0;
+    transition: all 0s;
+  }
+
+  .harmburger.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+    background: red;
+  }
 
 
   nav ul li{
@@ -380,11 +483,26 @@ padding: 16px 0 20px;
 
   .menu-icon{
     position: relative;
-    
     cursor: pointer;
     z-index: 10;
-    visibility: visible;
+    visibility:visible
   }
 
+}
+
+@media only screen and (max-width:600px){
+
+.row{
+  text-align: center;
+}
+
+.col-2, .col-3, .col-4{
+  flex-basis: 100%;
+}
+
+.app-logo{
+ scale: .7;
+ margin: 5px;
+}
 
 }
